@@ -1,0 +1,6 @@
+[Unit]
+Description=Hibernate system when battery drops below 5%
+
+[Service]
+Type=oneshot
+ExecStart=/home/sarius/.hibernateOnLowBat.sh

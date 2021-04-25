@@ -1,0 +1,10 @@
+[Unit]
+Description=Timer for dh-backup.service
+Requires=dh-backup.service
+
+[Timer]
+OnUnitActiveSec=15min
+AccuracySec=1min
+
+[Install]
+WantedBy=timers.target

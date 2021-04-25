@@ -1,0 +1,4 @@
+source /etc/vimrc
+source $VIMRUNTIME/defaults.vim
+set number
+au BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl setf glsl

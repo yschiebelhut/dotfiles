@@ -1,0 +1,11 @@
+[Unit]
+Description=Configure my XP-PEN Deco 01 V2
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/sarius/.wacom/deco/setup.sh
+
+[Install]
+WantedBy=graphical-session.target

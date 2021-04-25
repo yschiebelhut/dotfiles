@@ -1,0 +1,7 @@
+[Unit]
+Description=Make a restic backup of DHBW folder from SAP OneDrive to prevent hazzards
+
+[Service]
+Type=oneshot
+Environment="RESTIC_PASSWORD=1"
+ExecStart=/usr/bin/restic backup --repo /home/sarius/.dh-backup/ /home/sarius/DHBW/

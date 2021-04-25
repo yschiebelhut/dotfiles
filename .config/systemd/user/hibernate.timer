@@ -1,0 +1,10 @@
+[Unit]
+Description=Timer for hibernate.service
+Requires=hibernate.service
+
+[Timer]
+OnUnitActiveSec=1min
+AccuracySec=10s
+
+[Install]
+WantedBy=timers.target

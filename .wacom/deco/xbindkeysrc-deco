@@ -1,0 +1,31 @@
+# Button 1
+"sh /home/sarius/.wacom/deco/hdmi.sh"
+  b:8
+
+# Button 2
+"sh /home/sarius/.wacom/deco/edp.sh"
+  b:9
+
+# Button 3
+"sh /home/sarius/.wacom/deco/desktop.sh"
+  b:10
+
+# Button 4
+"xournalpp"
+  b:11
+
+# Button 5
+"xdotool key Print"
+  b:12
+
+# Button 6
+"xdotool click 4"
+  b:13 + Release
+
+# Button 7
+"xdotool click 5"
+  b:14 + Release
+
+# Button 8
+"/home/sarius/.mediaspace.py"
+  b:15

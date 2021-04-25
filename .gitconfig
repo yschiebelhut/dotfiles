@@ -1,0 +1,10 @@
+[user]
+	email = yannik.schiebelhut@gmail.com
+	name = Yannik Schiebelhut
+	signingkey = FF996A998DC0BDE0
+[commit]
+	gpgsign = true
+[pull]
+	rebase = false
+[init]
+	defaultBranch = master
