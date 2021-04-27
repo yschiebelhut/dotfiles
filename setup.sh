@@ -36,8 +36,8 @@ function backup {
 		BACKUP_DIR=".dot-backup"
 	fi
 
-	if [[ -d "$TESTHOME/$BACKUP_DIR" ]] || [[ -f "$TESTHOME/$BACKUP_DIR" ]]; then
-		echo -e "file or directory $TESTHOME/$BACKUP_DIR exists in filesystem\nDO NOT proceed if you aren't 100% confident about what you're doing!!!"
+	if [[ -d "$HOME/$BACKUP_DIR" ]] || [[ -f "$HOME/$BACKUP_DIR" ]]; then
+		echo -e "file or directory $HOME/$BACKUP_DIR exists in filesystem\nDO NOT proceed if you aren't 100% confident about what you're doing!!!"
 		read -p "Do you want to overwrite? [y/N]" yn
 		if [[ $yn != y ]]; then
 			echo "cancelling..."
@@ -48,15 +48,15 @@ function backup {
 
 	for i in $(find . -type d); do
 		if [[ "$i" != "./.git"* ]] && [[ "$i" != . ]]; then
-			if [[ -d "$TESTHOME/$i" ]]; then
-				mkdir -p "$TESTHOME/$BACKUP_DIR/$i"
+			if [[ -d "$HOME/$i" ]]; then
+				mkdir -p "$HOME/$BACKUP_DIR/$i"
 			fi
 		fi
 	done
 	for i in $(find . -type f); do
 		if [[ "$i" != ./setup.sh ]]; then
-			if [[ -f "$TESTHOME/$i" ]]; then
-				cp "$TESTHOME/$i" "$TESTHOME/$BACKUP_DIR/$i"
+			if [[ -f "$HOME/$i" ]]; then
+				cp "$HOME/$i" "$HOME/$BACKUP_DIR/$i"
 			fi
 		fi
 	done
@@ -79,13 +79,13 @@ function install {
 	# create non existing directories in destination
 	for i in $(find . -type d); do
 		if [[ "$i" != "./.git"* ]] && [[ "$i" != . ]]; then
-			mkdir -p "$TESTHOME/$i"
+			mkdir -p "$HOME/$i"
 		fi
 	done
 	# create a symlink to every file in the repo, overwriting previously existing files
 	for i in $(find . -type f); do
 		if [[ "$i" != "./.git"* ]] && [[ "$i" != ./setup.sh ]]; then
-			ln -sf "$PWD/$i" "$TESTHOME/$i"
+			ln -sf "$PWD/$i" "$HOME/$i"
 		fi
 	done
 
@@ -101,7 +101,7 @@ function restore {
 		BACKUP_DIR=".dot-backup"
 	fi
 
-	if [[ ! -d "$TESTHOME/$BACKUP_DIR" ]]; then
+	if [[ ! -d "$HOME/$BACKUP_DIR" ]]; then
 		echo -e "$BACKUP_DIR was not found in the filesystem, aborting. Please try again with a vaild backup directory."
 		exit 3
 	fi
@@ -109,23 +109,23 @@ function restore {
 	# remove all symlinks for files in repo
 	for i in $(find . -type f); do
 		if [[ "$i" != "./.git"* ]] && [[ "$i" != ./setup.sh ]]; then
-			rm "$TESTHOME/$i"
+			rm "$HOME/$i"
 		fi
 	done
 
 	# remove all symlinks for files in BACKUP_DIR in case repo does not contain some anymore
-	for i in $(find "$TESTHOME/$BACKUP_DIR" -type f | sed "s/$BACKUP_DIR/./"); do
+	for i in $(find "$HOME/$BACKUP_DIR" -type f | sed "s/$BACKUP_DIR/./"); do
 		if [[ -f "$i" ]] || [[ -L "$i" ]]; then
 			rm "$i"
 		fi
 	done
 
 	# create directories from backup in HOME in case they were deleted
-	for i in $(find "$TESTHOME/$BACKUP_DIR" -type d | sed "s/$BACKUP_DIR/./"); do
+	for i in $(find "$HOME/$BACKUP_DIR" -type d | sed "s/$BACKUP_DIR/./"); do
 		mkdir -p "$i"
 	done
 
-	for i in $(find "$TESTHOME/$BACKUP_DIR" -type f); do
+	for i in $(find "$HOME/$BACKUP_DIR" -type f); do
 		RESTORE_PATH=$(echo "$i" | sed "s/$BACKUP_DIR/./")
 		cp "$i" "$RESTORE_PATH"
 	done
