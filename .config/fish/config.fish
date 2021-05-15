@@ -12,7 +12,7 @@ alias please sudo
 
 export EDITOR=vim
 export BROWSER=firefox
-set PATH $PATH /home/sarius/.local/bin /home/sarius/.gem/ruby/2.7.0/bin /home/sarius/bin
+set PATH $PATH $HOME/.local/bin $HOME/.gem/ruby/2.7.0/bin $HOME/bin $HOME/.cabal/bin $HOME/.ghcup/bin
 
 # Start X at login
 if status is-login
@@ -20,3 +20,4 @@ if status is-login
         exec startx -- -keeptty &> /dev/null
     end
 end
+alias mon2cam="deno run --unstable -A -r -q https://raw.githubusercontent.com/ShayBox/Mon2Cam/master/src/mod.ts"

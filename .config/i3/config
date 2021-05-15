@@ -417,6 +417,8 @@ for_window [title="Microsoft Teams Notification"] floating enable
 for_window [title="Skype"] floating enable
 # fix for nautilus
 exec dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
+# enable "normal" mode for java ui learning in DHBW
+for_window [instance="de-dhbwka-*"] floating enable
 
 # wacom setup
 # Intuos
