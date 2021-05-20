@@ -14,4 +14,10 @@ export XSECURELOCK_SAVER=saver_mpv
 #export XSECURELOCK_LIST_VIDEOS_COMMAND="find ~/.lockwallpapers/ -type f"
 export XSECURELOCK_LIST_VIDEOS_COMMAND="find ~/.usearch/ -type f"
 export XSECURELOCK_IMAGE_DURATION_SECONDS=1000
+export XSECURELOCK_KEY_F1_COMMAND="amixer sset Master toggle"
+export XSECURELOCK_KEY_F2_COMMAND="amixer sset Master 5%-"
+export XSECURELOCK_KEY_F3_COMMAND="amixer sset Master 5%+"
+export XSECURELOCK_KEY_XF86AudioMute_COMMAND="amixer sset Master toggle"
+export XSECURELOCK_KEY_XF86AudioLowerVolume_COMMAND="amixer sset Master 5%-"
+export XSECURELOCK_KEY_XF86AudioRaiseVolume_COMMAND="amixer sset Master 5%+"
 XSECURELOCK_NO_COMPOSITE=1 XSECURELOCK_SHOW_DATETIME=1 XSECURELOCK_DATETIME_FORMAT="%A, %B %d %Y %T %Z" xsecurelock

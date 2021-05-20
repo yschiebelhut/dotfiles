@@ -4,17 +4,17 @@
   <property name="pressureSensitivity" value="true"/>
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="Right hand Note Taking"/>
-  <property name="lastSavePath" value="/home/sarius/DHBW/Vorlesungen/Mathe/Analysis"/>
-  <property name="lastOpenPath" value="/home/sarius/DHBW/Vorlesungen/Theoretische Informatik/Prädikatenlogik"/>
+  <property name="lastSavePath" value="/home/sarius/DHBW/Vorlesungen/Web-Engineering"/>
+  <property name="lastOpenPath" value="/home/sarius/DHBW/Vorlesungen/Mathe/Analysis"/>
   <property name="lastImagePath" value=""/>
   <property name="zoomStep" value="10.00000000"/>
   <property name="zoomStepScroll" value="2.00000000"/>
   <property name="displayDpi" value="124"/>
-  <property name="mainWndWidth" value="1276"/>
+  <property name="mainWndWidth" value="2556"/>
   <property name="mainWndHeight" value="1416"/>
   <property name="maximized" value="false"/>
-  <property name="showSidebar" value="false"/>
-  <property name="sidebarWidth" value="50"/>
+  <property name="showSidebar" value="true"/>
+  <property name="sidebarWidth" value="179"/>
   <property name="sidebarOnRight" value="false"/>
   <property name="scrollbarOnLeft" value="false"/>
   <property name="menubarVisible" value="true"/>
@@ -58,7 +58,7 @@
   <!--The count of rendered PDF pages which will be cached.-->
   <!--Config for new pages-->
   <property name="pdfPageCacheSize" value="10"/>
-  <property name="pageTemplate" value="xoj/template&#10;copyLastPageSize=true&#10;copyLastPageSettings=true&#10;size=595,000000x841,000000&#10;backgroundType=graph&#10;backgroundColor=#ffffffff&#10;"/>
+  <property name="pageTemplate" value="xoj/template&#10;copyLastPageSize=true&#10;copyLastPageSettings=false&#10;size=595,000000x841,000000&#10;backgroundType=graph&#10;backgroundColor=#ffffffff&#10;"/>
   <property name="sizeUnit" value="cm"/>
   <property name="audioFolder" value="file:///home/sarius/.xournalpp/audio"/>
   <property name="audioInputDevice" value="-1"/>
@@ -219,7 +219,7 @@
       <attribute name="drawingType" type="string" value="default"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="128"/>
-      <attribute name="size" type="string" value="THIN"/>
+      <attribute name="size" type="string" value="BIG"/>
       <attribute name="style" type="string" value="plain"/>
     </data>
     <data name="playObject">

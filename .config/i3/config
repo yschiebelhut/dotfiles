@@ -242,7 +242,7 @@ bindsym XF86Calculator exec "qalculate-gtk"
 for_window [title="Qalculate!"] floating enable
 
 # universal keybindings to control music playback
-bindsym $mod2+p mode playerctl
+bindsym $mod+p mode playerctl
 mode "playerctl" {
 	bindsym j exec "playerctl next"
 	bindsym k exec "playerctl previous"
@@ -357,7 +357,7 @@ assign [class="Telegram"] Telegram
 assign [class="alfaview"] alfaview
 
 exec "sleep 10; thunderbird"
-exec "sleep 10; telegram-desktop"
+exec "sleep 15; telegram-desktop"
 
 # remove urgency from above created windows
 exec "sleep 20; ~/.attention.sh"
