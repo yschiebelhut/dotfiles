@@ -4,16 +4,16 @@
   <property name="pressureSensitivity" value="true"/>
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="Right hand Note Taking"/>
-  <property name="lastSavePath" value="/home/sarius/DHBW/Vorlesungen/Web-Engineering"/>
+  <property name="lastSavePath" value="/home/sarius/DHBW/Vorlesungen/Mathe/Analysis"/>
   <property name="lastOpenPath" value="/home/sarius/DHBW/Vorlesungen/Mathe/Analysis"/>
   <property name="lastImagePath" value=""/>
   <property name="zoomStep" value="10.00000000"/>
   <property name="zoomStepScroll" value="2.00000000"/>
   <property name="displayDpi" value="124"/>
-  <property name="mainWndWidth" value="2556"/>
+  <property name="mainWndWidth" value="1276"/>
   <property name="mainWndHeight" value="1416"/>
   <property name="maximized" value="false"/>
-  <property name="showSidebar" value="true"/>
+  <property name="showSidebar" value="false"/>
   <property name="sidebarWidth" value="179"/>
   <property name="sidebarOnRight" value="false"/>
   <property name="scrollbarOnLeft" value="false"/>
@@ -215,11 +215,11 @@
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="pen">
-      <attribute name="color" type="hex" value="ff0000"/>
+      <attribute name="color" type="hex" value="000000"/>
       <attribute name="drawingType" type="string" value="default"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="128"/>
-      <attribute name="size" type="string" value="BIG"/>
+      <attribute name="size" type="string" value="THIN"/>
       <attribute name="style" type="string" value="plain"/>
     </data>
     <data name="playObject">
