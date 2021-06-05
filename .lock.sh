@@ -23,4 +23,5 @@ export XSECURELOCK_KEY_F6_COMMAND="playerctl next"
 export XSECURELOCK_KEY_XF86AudioMute_COMMAND="amixer sset Master toggle"
 export XSECURELOCK_KEY_XF86AudioLowerVolume_COMMAND="amixer sset Master 5%-"
 export XSECURELOCK_KEY_XF86AudioRaiseVolume_COMMAND="amixer sset Master 5%+"
+export XSECURELOCK_KEY_F12_COMMAND="sleep 0.2; xset dpms force off"
 XSECURELOCK_NO_COMPOSITE=1 XSECURELOCK_SHOW_DATETIME=1 XSECURELOCK_DATETIME_FORMAT="%A, %B %d %Y %T %Z" xsecurelock

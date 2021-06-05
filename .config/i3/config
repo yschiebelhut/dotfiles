@@ -230,6 +230,10 @@ bindsym $mod+i exec "amixer -q sset Master 5%+,5%+ unmute"
 bindsym XF86AudioLowerVolume exec "amixer -q sset Master 5%-,5%- unmute"
 bindsym $mod+u exec "amixer -q sset Master 5%-,5%- unmute"
 
+# TODO: make mute button for microphone working
+#       implement bash script, to visualize use of microphone
+#       and display its state in i3bar
+
 # Additional bindings for playerctl and XF86 media buttons
 bindsym XF86AudioPlay exec "playerctl play-pause"
 bindsym XF86AudioNext exec "playerctl next"
@@ -418,7 +422,9 @@ for_window [title="Skype"] floating enable
 # fix for nautilus
 exec dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
 # enable "normal" mode for java ui learning in DHBW
-for_window [instance="de-dhbwka-*"] floating enable
+for_window [instance="de-dhbwka-*"] floating enable border normal
+# enable floating mode by default for sound recorder
+for_window [class="Gnome-sound-recorder"] floating enable
 
 # wacom setup
 # Intuos
