@@ -53,48 +53,41 @@ foreground = #ffffff
 
 # 20% background transparency (requires a compositor)
 #background = rgba(63, 63, 63, 0.8)
-background = rgba(0, 0, 0, 0.6)
+background = rgba(0, 0, 0, 0.7)
 #background = rgba(0, 0, 0, 1)
 
 # If unset, will reverse foreground and background
 #highlight = #2f2f2f
 
 # Colors from color0 to color254 can be set
-#color0 = #3f3f3f
-#color1 = #705050
-#color2 = #60b48a
-#color3 = #dfaf8f
-#color4 = #506070
-#color5 = #dc8cc3
-#color6 = #8cd0d3
-#color7 = #dcdccc
+color0 = #3f3f3f
+color1 = #b72222
+color2 = #60b48a
+color3 = #dfaf8f
+color4 = #506070
+color5 = #dc8cc3
+color6 = #8cd0d3
+color7 = #dcdccc
+
+color8 = #709080
+color9 = #fc6969
+color10 = #ade97c
+color11 = #f0dfaf
+color12 = #5b8df1
+color13 = #e467c1
+color14 = #93e0e3
+color15 = #ffffff
+
+# (just a legend what the colors stand for)
 #color0 = black
 #color1 = red
 #color2 = green
 #color3 = yellow
 #color4 = blue
-color4 = #81a2be
 #color5 = purple
 #color6 = cyan
 #color7 = white
-
-#color8 = #709080
-#color9 = #dca3a3
-#color10 = #c3bf9f
-#color11 = #f0dfaf
-#color12 = #94bff3
-#color13 = #ec93d3
-#color14 = #93e0e3
-#color15 = #ffffff
-
-#color8 = black
-#color9 = red
-#color10 = #3ed64f
-#color11 = yellow
-#color12 = #587cb7
-#color13 = purple
-#color14 = cyan
-#color15 = white
+# color 8-15 for bright counterparts
 
 [hints]
 #font = Monospace 12
