@@ -131,6 +131,7 @@ bindsym $mod+F12 workspace 22
 bindsym $mod+t workspace Telegram
 bindsym $mod+ssharp workspace Thunderbird
 bindsym $mod+dead_acute workspace alfaview
+bindsym $mod+g workspace Gimp
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
@@ -160,6 +161,7 @@ bindsym $mod+Shift+F12 move container to workspace 22
 bindsym $mod+Shift+t move container to workspace Telegram
 bindsym $mod+Shift+ssharp move container to workspace Thunderbird
 bindsym $mod+Shift+dead_acute move container to workspace alfaview
+bindsym $mod+Shift+g move container to workspace Gimp
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -333,8 +335,9 @@ bindsym $mod+Print exec "import -silent -window root ~/Pictures/screenshots/Scre
 bindsym $mod+Shift+Print exec "sleep 0.2; import -frame ~/Pictures/screenshots/Screen_$(date +%F)_$(date +%R):$(date +%S).png"
 
 # in case of multiple monitors
+# TODO: IDEA: replace static monitor names with variables
 workspace 1 output eDP1
-workspace "Telegram" output eDP1
+#workspace "Telegram" output eDP1
 workspace "Thunderbird" output eDP1
 workspace "alfaview" output eDP1
 
@@ -362,6 +365,7 @@ workspace 20 output HDMI1
 assign [class="Thunderbird"] Thunderbird
 assign [class="Telegram"] Telegram
 assign [class="alfaview"] alfaview
+assign [class="Gimp-2.10"] Gimp
 
 exec "sleep 10; thunderbird"
 exec "sleep 15; telegram-desktop"
@@ -428,6 +432,8 @@ exec dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPL
 for_window [instance="de-dhbwka-*"] floating enable border normal
 # enable floating mode by default for sound recorder
 for_window [class="Gnome-sound-recorder"] floating enable
+# enable floating mode for flameshot open with
+for_window [class="flameshot" title="Open With"] floating enable
 
 # wacom setup
 # Intuos
