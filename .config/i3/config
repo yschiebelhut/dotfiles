@@ -368,7 +368,7 @@ assign [class="alfaview"] alfaview
 assign [class="Gimp-2.10"] Gimp
 
 exec "sleep 10; thunderbird"
-exec "sleep 15; telegram-desktop"
+#exec "sleep 15; telegram-desktop"
 
 # remove urgency from above created windows
 exec "sleep 20; ~/.attention.sh"
