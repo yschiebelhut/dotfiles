@@ -24,7 +24,7 @@ SETUVAR _fish_abbr_lsnet:iwctl\x20station\x20wlan0\x20scan\x3b\x20iwctl\x20stati
 SETUVAR _fish_abbr_lyc:ssh\x20lycus
 SETUVAR _fish_abbr_mh:sshfs\x20\x2do\x20ssh_command\x3d\x22ssh\x20\x2di\x20\x7e/\x2essh/mh_rsa\x22\x20\x2dp2222\x20192\x2e168\x2e178\x2e232\x3a/storage/CC8F\x2d530C\x20\x7e/handy/sd\x3b\x20sshfs\x20\x2do\x20ssh_command\x3d\x22ssh\x20\x2di\x20\x7e/\x2essh/mh_rsa\x22\x20\x2dp2222\x20192\x2e168\x2e178\x2e232\x3a/storage/emulated/0\x20\x7e/handy/internal
 SETUVAR _fish_abbr_mounta:sudo\x20mount\x20\x2da
-SETUVAR _fish_abbr_nocaffein:xset\x20s\x20300\x2015
+SETUVAR _fish_abbr_nocaffein:xset\x20s\x20300\x2015\x3b\x20xset\x20dpms\x20600\x20600\x20600
 SETUVAR _fish_abbr_qi:pacman\x20\x2dQi
 SETUVAR _fish_abbr_qs:pacman\x20\x2dQs
 SETUVAR _fish_abbr_remov:sudo\x20pacman\x20\x2dRns
