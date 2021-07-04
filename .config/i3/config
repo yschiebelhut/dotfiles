@@ -363,7 +363,7 @@ workspace 18 output HDMI1
 workspace 20 output HDMI1
 
 assign [class="Thunderbird"] Thunderbird
-assign [class="Telegram"] Telegram
+#assign [class="Telegram"] Telegram
 assign [class="alfaview"] alfaview
 assign [class="Gimp-2.10"] Gimp
 
