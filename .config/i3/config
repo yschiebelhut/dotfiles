@@ -205,6 +205,7 @@ bindsym $mod2+y exec "autorandr -c"
 bar {
         status_command i3status
 	font xft:Monospace 9
+	tray_output primary
 }
 
 # Remove borders
@@ -238,6 +239,8 @@ bindsym $mod+u exec "amixer -q sset Master 5%-,5%- unmute"
 # TODO: make mute button for microphone working
 #       implement bash script, to visualize use of microphone
 #       and display its state in i3bar
+
+exec --no-startup-id "pasystray"
 
 # Additional bindings for playerctl and XF86 media buttons
 bindsym XF86AudioPlay exec "playerctl play-pause"
