@@ -24,6 +24,7 @@ for x in workspaces:
 
 print(curData)
 
+# if currently on mediaspace restore
 if curData["curWorkspaceName"] == "1":
     f = open(tmpFile, "r")
     restoreData = json.loads(f.read())
@@ -33,6 +34,7 @@ if curData["curWorkspaceName"] == "1":
 
     os.system('i3-msg workspace ' + restoreData["curWorkspaceName"])
 
+# if not on mediaspace, open it
 else:
     if curData["curWorkspaceOutput"] != curData["mediaOutput"]:
         # switch to mediaOutput
@@ -41,7 +43,7 @@ else:
         # save jump workspace
         tmpWorkspaces = json.loads(str(os.popen('i3-msg -t get_workspaces').readlines()[0])) 
         for x in tmpWorkspaces:
-            if x["focused"]:
+            if x["focused"] and x["name"] != "1":
                 curData["jumpWorkspace"] = x["name"]
 
     # write current state to file to enable reversion later on
@@ -49,6 +51,7 @@ else:
     f.write(json.dumps(curData))
     f.close()
 
-    os.system('i3-msg workspace 1')
-
-
+    # only invoke workspace switch if mediaspace not currently active
+    # needed to circumvent problems with i3's auto back and forth feature
+    if curData["jumpWorkspace"] != "-" or curData["curWorkspaceOutput"] == curData["mediaOutput"]:
+        os.system('i3-msg workspace 1')
