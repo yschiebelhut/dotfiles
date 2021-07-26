@@ -1,3 +1,4 @@
 #!/bin/sh
 #feh --no-fehbg --bg-fill '/home/sarius/wallpapers/skyline1_flash.png' 
-feh --no-fehbg --bg-fill '/usr/share/backgrounds/archlinux/archwave.png' 
+#feh --no-fehbg --bg-fill '/usr/share/backgrounds/archlinux/archwave.png' 
+feh --no-fehbg --bg-fill '/usr/share/backgrounds/archlinux/wave.png' 
