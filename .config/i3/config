@@ -131,7 +131,6 @@ bindsym $mod+F12 workspace 22
 bindsym $mod+t workspace Telegram
 bindsym $mod+ssharp workspace Thunderbird
 bindsym $mod+dead_acute workspace alfaview
-bindsym $mod+g workspace Gimp
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
@@ -161,7 +160,6 @@ bindsym $mod+Shift+F12 move container to workspace 22
 bindsym $mod+Shift+t move container to workspace Telegram
 bindsym $mod+Shift+ssharp move container to workspace Thunderbird
 bindsym $mod+Shift+dead_acute move container to workspace alfaview
-bindsym $mod+Shift+g move container to workspace Gimp
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -241,6 +239,10 @@ bindsym $mod+u exec "amixer -q sset Master 5%-,5%- unmute"
 #       and display its state in i3bar
 
 exec --no-startup-id "pasystray"
+exec --no-startup-id "pavucontrol"
+for_window [class="Pavucontrol"] move scratchpad
+#bindsym $mod+y [class="Pavucontrol"] scratchpad show
+bindsym $mod+y scratchpad show
 
 # Additional bindings for playerctl and XF86 media buttons
 bindsym XF86AudioPlay exec "playerctl play-pause"
@@ -368,7 +370,6 @@ workspace 20 output HDMI1
 assign [class="Thunderbird"] Thunderbird
 #assign [class="Telegram"] Telegram
 assign [class="alfaview"] alfaview
-assign [class="Gimp-2.10"] Gimp
 
 exec "sleep 10; thunderbird"
 #exec "sleep 15; telegram-desktop"
