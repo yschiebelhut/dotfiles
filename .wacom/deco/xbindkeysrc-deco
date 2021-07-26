@@ -27,5 +27,6 @@
   b:14 + Release
 
 # Button 8
-"/home/sarius/.mediaspace.py"
+#"/home/sarius/.mediaspace.py"
+"xdotool key super+f"
   b:15
