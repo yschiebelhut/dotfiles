@@ -229,10 +229,12 @@ bindsym $mod2+s exec "systemctl suspend"
 
 # Control audio volume
 bindsym XF86AudioMute exec "amixer -q sset Master toggle"
-bindsym XF86AudioRaiseVolume exec "amixer -q sset Master 5%+,5%+ unmute"
-bindsym $mod+i exec "amixer -q sset Master 5%+,5%+ unmute"
-bindsym XF86AudioLowerVolume exec "amixer -q sset Master 5%-,5%- unmute"
-bindsym $mod+u exec "amixer -q sset Master 5%-,5%- unmute"
+set $raise-volume "amixer -q sset Master 5%+,5%+ unmute"
+set $lower-volume "amixer -q sset Master 5%-,5%- unmute"
+bindsym XF86AudioRaiseVolume exec $raise-volume
+bindsym $mod+i exec $raise-volume
+bindsym XF86AudioLowerVolume exec $lower-volume
+bindsym $mod+u exec $lower-volume
 
 # TODO: make mute button for microphone working
 #       implement bash script, to visualize use of microphone
@@ -261,6 +263,9 @@ mode "playerctl" {
 	bindsym j exec "playerctl next"
 	bindsym k exec "playerctl previous"
 	bindsym p exec "playerctl play-pause"
+	bindsym space exec "playerctl play-pause"
+	bindsym u exec $lower-volume
+	bindsym i exec $raise-volume
 
 	bindsym Escape mode "default"
 }
@@ -380,6 +385,9 @@ exec "sleep 20; ~/.attention.sh"
 # Start equalizer in background
 # Disable cause no sound was available (2020-11-14)
 #exec "pulseeffects --gapplication-service"
+
+# start discord
+exec --no-startup-id "discord --no-sandbox --start-minimized &"
 
 
 
