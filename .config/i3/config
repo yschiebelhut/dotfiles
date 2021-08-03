@@ -384,7 +384,7 @@ exec "sleep 20; ~/.attention.sh"
 
 # Start equalizer in background
 # Disable cause no sound was available (2020-11-14)
-#exec "pulseeffects --gapplication-service"
+exec "easyeffects --gapplication-service"
 
 # start discord
 exec --no-startup-id "discord --no-sandbox --start-minimized &"
@@ -425,7 +425,7 @@ exec_always --no-startup-id "sleep 5; xkbcomb .keymap.xkb $DISPLAY"
 exec "~/.keymap.sh &"
 
 # Fix annoying volume levels
-exec "~/.correctVolume.py"
+exec --no-startup-id "~/.correctVolume.py"
 
 # Prepare kdeconnect
 #exec --no-startup-id "/usr/lib/kdeconnectd"
