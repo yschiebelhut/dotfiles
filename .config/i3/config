@@ -425,7 +425,8 @@ exec_always --no-startup-id "sleep 5; xkbcomb .keymap.xkb $DISPLAY"
 exec "~/.keymap.sh &"
 
 # Fix annoying volume levels
-exec --no-startup-id "~/.correctVolume.py"
+# disabled i3 autostart in favor of auto relaunching systemd service
+#exec --no-startup-id "~/.correctVolume.py"
 
 # Prepare kdeconnect
 #exec --no-startup-id "/usr/lib/kdeconnectd"

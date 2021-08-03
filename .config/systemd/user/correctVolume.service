@@ -1,0 +1,9 @@
+[Unit]
+Description=Automatically round volume to steps of 5 and set left/right channel to same value
+
+[Service]
+ExecStart=/home/sarius/.correctVolume.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
