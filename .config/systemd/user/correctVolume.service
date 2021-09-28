@@ -1,9 +1,11 @@
 [Unit]
 Description=Automatically round volume to steps of 5 and set left/right channel to same value
+After=pipewire.service
 
 [Service]
-ExecStart=/home/sarius/.correctVolume.py
 Restart=always
+ExecStart=/home/sarius/.correctVolume.py
+StartLimitIntervalSec=0
 
 [Install]
 WantedBy=multi-user.target

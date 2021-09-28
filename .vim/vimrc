@@ -3,3 +3,5 @@ source $VIMRUNTIME/defaults.vim
 set number
 au BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl setf glsl
 set ttymouse=sgr
+set tabstop=4
+set shiftwidth=0
